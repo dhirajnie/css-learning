@@ -8,17 +8,32 @@
     <title>CSS Selectors</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .dropdown-item {
+        .dropdown-item a {
             display: none;
         }
 
-        .dropdown:hover .dropdown-item {
+        .dropdown:hover .dropdown-item a {
             display: block;
+        }
+
+        h1::first-letter {
+            font-size: 70px;
+        }
+
+        h1::before {
+            content: "This is before heading ";
+            color: blue;
+        }
+
+        h1::after {
+            content: "After the heading ";
+            color: brown;
         }
     </style>
 </head>
 
 <body>
+    <h1>Heading</h1>
     <div class="dropdown">
         <a href="#">Item</a>
         <div class="dropdown-item">
